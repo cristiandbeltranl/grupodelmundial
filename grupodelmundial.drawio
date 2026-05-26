@@ -1,0 +1,222 @@
+<mxGraphModel>
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+
+    <!-- INICIO -->
+    <mxCell id="2" value="INICIO" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1e6b3c;fontColor=#ffffff;strokeColor=#1b4332;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+      <mxGeometry x="310" y="20" width="120" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Definir Grupo K -->
+    <mxCell id="3" value="Definir equipos del Grupo K&#xa;Portugal, RD Congo, Uzbekistán, Colombia" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d8f3dc;strokeColor=#74c69d;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="110" width="300" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Inicializar tabla -->
+    <mxCell id="4" value="Inicializar tabla de posiciones&#xa;puntos=0, gf=0, gc=0, dg=0 para cada equipo" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d8f3dc;strokeColor=#74c69d;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="210" y="200" width="320" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Mostrar titulo -->
+    <mxCell id="5" value='Mostrar: "GRUPO K - MUNDIAL 2026"' style="parallelogram;whiteSpace=wrap;html=1;fillColor=#e8f4fd;strokeColor=#74b4e6;" vertex="1" parent="1">
+      <mxGeometry x="220" y="290" width="300" height="46" as="geometry"/>
+    </mxCell>
+
+    <!-- Definir partidos -->
+    <mxCell id="6" value="Definir lista de 6 partidos&#xa;POR-RDC, UZB-COL, POR-UZB, COL-RDC, COL-POR, RDC-UZB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d8f3dc;strokeColor=#74c69d;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="205" y="376" width="330" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Decision: quedan partidos? -->
+    <mxCell id="7" value="¿Quedan partidos&#xa;por registrar?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff3cd;strokeColor=#e6a817;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="270" y="466" width="200" height="80" as="geometry"/>
+    </mxCell>
+
+    <!-- Mostrar partido -->
+    <mxCell id="8" value='Mostrar: "Local vs Visitante"' style="parallelogram;whiteSpace=wrap;html=1;fillColor=#e8f4fd;strokeColor=#74b4e6;" vertex="1" parent="1">
+      <mxGeometry x="220" y="586" width="300" height="46" as="geometry"/>
+    </mxCell>
+
+    <!-- INPUT goles -->
+    <mxCell id="9" value="INPUT: Ingresar goles local y visitante&#xa;goles_local = int(input(...))&#xa;goles_visitante = int(input(...))" style="parallelogram;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#e57373;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="205" y="672" width="330" height="60" as="geometry"/>
+    </mxCell>
+
+    <!-- Actualizar GF y GC -->
+    <mxCell id="10" value="Actualizar GF y GC&#xa;tabla[local] y tabla[visitante] += goles" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d8f3dc;strokeColor=#74c69d;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="782" width="300" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Decision: local > visitante? -->
+    <mxCell id="11" value="goles_local &gt; goles_visitante?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff3cd;strokeColor=#e6a817;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="270" y="872" width="200" height="80" as="geometry"/>
+    </mxCell>
+
+    <!-- Local gana -->
+    <mxCell id="12" value='tabla[local]["puntos"] += 3' style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d8f3dc;strokeColor=#74c69d;" vertex="1" parent="1">
+      <mxGeometry x="50" y="882" width="180" height="46" as="geometry"/>
+    </mxCell>
+
+    <!-- Decision: visitante > local? -->
+    <mxCell id="13" value="goles_visitante &gt; goles_local?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff3cd;strokeColor=#e6a817;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="490" y="872" width="200" height="80" as="geometry"/>
+    </mxCell>
+
+    <!-- Visitante gana -->
+    <mxCell id="14" value='tabla[visitante]["puntos"] += 3' style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d8f3dc;strokeColor=#74c69d;" vertex="1" parent="1">
+      <mxGeometry x="490" y="1002" width="200" height="46" as="geometry"/>
+    </mxCell>
+
+    <!-- Empate -->
+    <mxCell id="15" value="local += 1&#xa;visitante += 1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d8f3dc;strokeColor=#74c69d;" vertex="1" parent="1">
+      <mxGeometry x="720" y="882" width="140" height="46" as="geometry"/>
+    </mxCell>
+
+    <!-- Calcular DG -->
+    <mxCell id="16" value="Calcular diferencia de gol&#xa;dg = gf - gc para cada equipo" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d8f3dc;strokeColor=#74c69d;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1120" width="300" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Ordenar tabla -->
+    <mxCell id="17" value="Ordenar tabla de posiciones&#xa;clave: (puntos, dg, gf) descendente" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d8f3dc;strokeColor=#74c69d;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="210" y="1210" width="320" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Mostrar encabezado tabla -->
+    <mxCell id="18" value="Mostrar encabezado: Equipo | PTS | GF | GC | DG" style="parallelogram;whiteSpace=wrap;html=1;fillColor=#e8f4fd;strokeColor=#74b4e6;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1300" width="300" height="46" as="geometry"/>
+    </mxCell>
+
+    <!-- Decision: quedan equipos? -->
+    <mxCell id="19" value="¿Quedan equipos&#xa;por mostrar?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff3cd;strokeColor=#e6a817;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="270" y="1386" width="200" height="80" as="geometry"/>
+    </mxCell>
+
+    <!-- OUTPUT fila equipo -->
+    <mxCell id="20" value="OUTPUT: Mostrar fila del equipo&#xa;Equipo  PTS  GF  GC  DG" style="parallelogram;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#e57373;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="1506" width="300" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- FIN -->
+    <mxCell id="21" value="FIN" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1e6b3c;fontColor=#ffffff;strokeColor=#1b4332;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+      <mxGeometry x="310" y="1630" width="120" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- ===== FLECHAS ===== -->
+
+    <!-- INICIO → Definir Grupo K -->
+    <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="2" target="3" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <!-- Definir → Inicializar -->
+    <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="3" target="4" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <!-- Inicializar → Mostrar titulo -->
+    <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="4" target="5" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <!-- Mostrar titulo → Definir partidos -->
+    <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="5" target="6" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <!-- Definir partidos → Decision partidos -->
+    <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="6" target="7" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+    <!-- Decision partidos SÍ → Mostrar partido -->
+    <mxCell id="e6" value="SÍ" style="edgeStyle=orthogonalEdgeStyle;fontStyle=1;fontColor=#27ae60;" edge="1" source="7" target="8" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <!-- Decision partidos NO → Calcular DG -->
+    <mxCell id="e7" value="NO" style="edgeStyle=orthogonalEdgeStyle;fontStyle=1;fontColor=#c0392b;exitX=1;exitY=0.5;exitObject=7;entryX=1;entryY=0.5;" edge="1" source="7" target="16" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="900" y="506"/>
+          <mxPoint x="900" y="1145"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Mostrar partido → INPUT -->
+    <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="8" target="9" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <!-- INPUT → Actualizar GF GC -->
+    <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="9" target="10" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <!-- Actualizar → Decision local>visitante -->
+    <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="10" target="11" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+    <!-- Decision local>visitante SÍ → Local gana -->
+    <mxCell id="e11" value="SÍ" style="edgeStyle=orthogonalEdgeStyle;fontStyle=1;fontColor=#27ae60;exitX=0;exitY=0.5;" edge="1" source="11" target="12" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <!-- Decision local>visitante NO → Decision visitante>local -->
+    <mxCell id="e12" value="NO" style="edgeStyle=orthogonalEdgeStyle;fontStyle=1;fontColor=#c0392b;exitX=1;exitY=0.5;" edge="1" source="11" target="13" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- Decision visitante>local SÍ → Visitante gana -->
+    <mxCell id="e13" value="SÍ" style="edgeStyle=orthogonalEdgeStyle;fontStyle=1;fontColor=#27ae60;exitX=0.5;exitY=1;" edge="1" source="13" target="14" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <!-- Decision visitante>local NO → Empate -->
+    <mxCell id="e14" value="NO" style="edgeStyle=orthogonalEdgeStyle;fontStyle=1;fontColor=#c0392b;exitX=1;exitY=0.5;" edge="1" source="13" target="15" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- Join: Local gana → loop back -->
+    <mxCell id="e15" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="12" target="7" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="50" y="905"/>
+          <mxPoint x="50" y="506"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <!-- Join: Visitante gana → loop back -->
+    <mxCell id="e16" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="14" target="7" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="590" y="1070"/>
+          <mxPoint x="590" y="1080"/>
+          <mxPoint x="50" y="1080"/>
+          <mxPoint x="50" y="506"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <!-- Join: Empate → loop back -->
+    <mxCell id="e17" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="15" target="7" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="860" y="905"/>
+          <mxPoint x="860" y="1090"/>
+          <mxPoint x="50" y="1090"/>
+          <mxPoint x="50" y="506"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Calcular DG → Ordenar -->
+    <mxCell id="e18" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="16" target="17" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <!-- Ordenar → Mostrar encabezado -->
+    <mxCell id="e19" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="17" target="18" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <!-- Mostrar encabezado → Decision equipos -->
+    <mxCell id="e20" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="18" target="19" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+    <!-- Decision equipos SÍ → OUTPUT -->
+    <mxCell id="e21" value="SÍ" style="edgeStyle=orthogonalEdgeStyle;fontStyle=1;fontColor=#27ae60;" edge="1" source="19" target="20" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <!-- OUTPUT → loop back a decision equipos -->
+    <mxCell id="e22" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="20" target="19" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="100" y="1531"/>
+          <mxPoint x="100" y="1426"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Decision equipos NO → FIN -->
+    <mxCell id="e23" value="NO" style="edgeStyle=orthogonalEdgeStyle;fontStyle=1;fontColor=#c0392b;exitX=1;exitY=0.5;" edge="1" source="19" target="21" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="900" y="1426"/>
+          <mxPoint x="900" y="1655"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+  </root>
+</mxGraphModel>
